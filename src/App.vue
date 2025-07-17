@@ -40,7 +40,8 @@ import { reactive } from 'vue';
 
 <template>
 
-<div class="container">
+
+  <div class="container">
     <div class="row">
     <div class="col">
       <header>
@@ -64,6 +65,7 @@ import { reactive } from 'vue';
   </div>
 </div>
 
+
 </template>
 
 <style scoped>
@@ -73,22 +75,25 @@ import { reactive } from 'vue';
   margin: 200px auto;
   max-width: 900px;
   border-radius: 30px;
-  background-color: #bc92d5;
-  border: 1px solid black;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: #51425f;
+  border: 3px solid  #2e1437;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
 input{
   height: 34px;
-  background-color: #f5d8ff;
-  border: 2px solid #a37ac0;
+  background-color: #cad1c3;
+  border: 2px solid #51425f;
+}
+input:focus{
+  outline: none;
 }
 
 select{
   font-size: 20px;
   height: 34px;
-  background-color: #f5d8ff;
-  border: 2px solid #a37ac0;
+  background-color: #cad1c3;
+  border: 2px solid #51425f;
 }
 
 
@@ -103,7 +108,7 @@ form{
   align-items: center;
   justify-content: center;
   padding: 50px;
-  background-color: #d5a9ea;
+  background-color: #412a49;
   border-bottom-right-radius:30px ;
   border-bottom-left-radius:30px ;
 }
@@ -116,15 +121,38 @@ img{
 
 h1{
   margin: 0 auto;
+  color: #e7eed0;
 }
 
 .resultado{
-  width: 32px;
-  height: 34px;
+  min-width: 32px;
+  min-height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #a37ac0;
-  background-color:#f5d8ff;
+  border: 2px solid #e7eed0;
+  background-color:#cad1c3;
 }
+
+@media (max-width:764px){
+  form{
+    display: grid;
+  }
+
+  img{
+    margin: 16px auto;
+  }
+
+  .container{
+    margin-top: 32px;
+  }
+
+  h1{
+  margin:0 50px ;
+  color: #e7eed0;
+}
+
+
+}
+
 </style>
